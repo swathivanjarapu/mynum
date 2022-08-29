@@ -1,12 +1,9 @@
-n=int(input("enter number "))
-if n<1:
-    print("not prinme")
-elif n>2:
-    for i in range(n):
-        for j in range(2,i):
-            if i%j==0:
-                break
-        else:
-            print(i,"is prime")
-else:
-    print("not prime number")
+for Number in range (1, 101):
+    count = 0
+    for i in range(2, (Number//2 + 1)):
+        if(Number % i == 0):
+            count = count + 1
+            break
+
+    if (count == 0 and Number != 1):
+        print(" %d" %Number, end = '  ')
